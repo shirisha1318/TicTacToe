@@ -4,9 +4,23 @@ import './PlayBoard.css';
 class PlayBoard extends React.Component {
     render() {
         return(
-          <div>            
-           <p>Get Play Board</p>  
-          </div>
+            <div>            
+                <div className="row">
+                    <button className="square">X</button>
+                    <button className="square">X</button>
+                    <button className="square">X</button>
+                </div>
+                <div className="row">
+                    <button className="square">X</button>
+                    <button className="square">X</button>
+                    <button className="square">X</button>
+                </div>
+                <div className="row">
+                    <button className="square">X</button>
+                    <button className="square">X</button>
+                    <button className="square">X</button>
+                </div>  
+            </div>
         )
     }
 }
