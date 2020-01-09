@@ -3,17 +3,35 @@ import './PlayBoard.css';
 
 class PlayBoard extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+          squares: Array(9).fill(null),
+          isXNext: true,
+        }
+      }
 
     getSquare(i) {
         return (
           <Square
-            value="X" 
+          value={this.state.squares[i]}
+          onClick={() => this.squareClick(i)} 
           />
         );
       }
+    
+      squareClick(i) {
+        const squares = this.state.squares.slice();        
+        squares[i] = this.state.isXNext ? 'X' : 'O';
+        this.setState({
+          squares: squares,
+          isXNext: !this.state.isXNext,
+        });
+      }
+        
     render() {
         return(
-            <div>            
+            <div>          
                 <div className="row">
                     {this.getSquare(0)}
                     {this.getSquare(1)}
