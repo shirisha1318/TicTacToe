@@ -18,3 +18,29 @@
     text-align: center;
     width: 34px;
   }
+
+  .status {
+    margin-bottom: 10px;
+  }
+  
+ 
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+.primary{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    float: left;
+  }
